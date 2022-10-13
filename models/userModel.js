@@ -2,10 +2,25 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
 const userSchema = new mongoose.Schema({
-	username: {
+	teamname: {
 		type: String,
 		required: true,
 		unique: [true, "This username is already taken!"],
+	},
+	email:{
+		type:String,
+		required: true,
+		unique: [true, "This email has already been used!"],
+	},
+	u1:{
+		type:String,
+		required: true,
+	},
+	u2:{
+		type:String
+	},
+	u3:{
+		type:String
 	},
 	password: {
 		type: String,

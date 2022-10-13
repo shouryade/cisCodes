@@ -15,8 +15,8 @@ const AppError = require("./utils/appError");
 const errHandler = require("./utils/errorHandler");
 
 const app = express();
-app.set("view engine", "pug");
-app.set("views", path.join(__dirname, "public", "views"));
+// app.set("view engine", "pug");
+// app.set("views", path.join(__dirname, "public", "views"));
 
 mongoose
 	.connect(process.env.MONGO_SRV, {
